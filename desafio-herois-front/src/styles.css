@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.formulario {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: none;
+  border: 1px solid #ccc;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+}
