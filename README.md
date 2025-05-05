@@ -2,7 +2,8 @@ Desafio Front end e Back end de Heróis
 
 🦸‍♀️ Desafio CRUD de Heróis — Backend + Frontend
 
-✅ O que foi realizado
+✅ O que foi realizado:
+
 Criei uma aplicação completa com backend em ASP.NET Core e frontend com Angular, permitindo o cadastro, listagem, edição e visualização de heróis com seus superpoderes.
 
 🧠 Backend (ASP.NET Core Web API)
