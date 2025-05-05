@@ -1,49 +1,55 @@
-import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-hero-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   template: `
-    <button (click)="abrirFormulario()">Adicionar Herói</button>
+  <div>
+  <!-- Adicionando a imagem -->
+  <img src="assets/marvel.jpg" alt="Imagem do Herói" />
 
-    <div *ngIf="formularioAberto()" class="formulario">
-      <h2>Novo Herói</h2>
-      <label>Nome:</label>
-      <input type="text" [(ngModel)]="nome"/>
+    <form>
+      <label>Nome do Herói:</label>
+      <input type="text" id="nomeHeroi" [(ngModel)]="nomeHeroi" />
 
-      <label>Nome de Herói:</label>
-      <input type="text" [(ngModel)]="nomeHeroi"/>
+      <label>Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" [(ngModel)]="dataNascimento" />
+
+      <label>Altura (cm):</label>
+      <input type="number" id="altura" [(ngModel)]="altura" />
+
+      <label>Peso (kg):</label>
+      <input type="number" id="peso" [(ngModel)]="peso" />
 
       <button (click)="salvarHeroi()">Salvar</button>
-      <button (click)="fecharFormulario()">Cancelar</button>
+      <button (click)="cancelar()">Cancelar</button>
+    </form>
     </div>
   `,
-  styles: [`
-    .formulario {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      margin-top: 1rem;
-    }
-  `]
 })
 export class HeroFormComponent {
-  formularioAberto = signal(false);
-  nome = '';
-  nomeHeroi = '';
+  nomeHeroi: string = '';
+  dataNascimento: string = '';
+  altura: number | null = null;
+  peso: number | null = null;
 
-  abrirFormulario() {
-    this.formularioAberto.set(true);
-  }
-
-  fecharFormulario() {
-    this.formularioAberto.set(false);
-  }
 
   salvarHeroi() {
-    alert(`Herói salvo: ${this.nomeHeroi}`);
-    this.fecharFormulario();
+    console.log({
+      nomeHeroi: this.nomeHeroi,
+      dataNascimento: this.dataNascimento,
+      altura: this.altura,
+      peso: this.peso,
+    });
+  }
+
+
+  cancelar() {
+    this.nomeHeroi = '';
+    this.dataNascimento = '';
+    this.altura = null;
+    this.peso = null;
   }
 }

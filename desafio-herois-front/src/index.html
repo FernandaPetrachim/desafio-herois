@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <title>CRUD de Heróis</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Lista de Heróis</h1>
-    <button onclick="abrirFormulario()">Adicionar Herói</button>
+  <head>
+    <meta charset="UTF-8">
+    <title>Desafio Heróis</title>
+  </head>
+  <body>
+    <h1>Cadastro de Herói</h1>
+  <form id="formulario">
+    <label for="nomeHeroi">Nome do Herói:</label>
+    <input type="text" id="nomeHeroi" placeholder="Nome do herói" required />
 
-    <div id="formulario" class="formulario">
-      <h2 id="titulo-form">Novo Herói</h2>
-      <input type="hidden" id="heroiId" />
-      <label>Nome:</label>
-      <input type="text" id="nome" />
+    <label for="dataNascimento">Data de Nascimento:</label>
+    <input type="date" id="dataNascimento" required />
 
-      <label>Nome de Herói:</label>
-      <input type="text" id="nomeHeroi" />
+    <label for="altura">Altura (em cm):</label>
+    <input type="number" id="altura" placeholder="Altura em cm" required />
 
-      <label>Data de Nascimento:</label>
-      <input type="date" id="dataNascimento" />
+    <label for="peso">Peso (em kg):</label>
+    <input type="number" id="peso" placeholder="Peso em kg" required />
 
-      <label>Altura (cm):</label>
-      <input type="number" id="altura" />
+    <label for="superpoderes">Superpoderes:</label>
+    <input type="text" id="superpoderes" placeholder="Superpoderes" required />
 
-      <label>Peso (kg):</label>
-      <input type="number" id="peso" />
+    <button type="submit">Adicionar</button>
+    <button type="button" onclick="cancelarFormulario()">Cancelar</button>
+  </form>
 
-      <label>Superpoderes (IDs separados por vírgula):</label>
-      <input type="text" id="superpoderes" />
-
-      <button onclick="salvarHeroi()">Salvar</button>
-      <button onclick="fecharFormulario()">Cancelar</button>
-    </div>
-
-    <ul id="listaHerois"></ul>
+  <div class="imagem-hero">
+    <label style="font-weight: bold; display: block; margin-bottom: 8px;">Imagem do Herói</label>
+    <img src="assets/marvel.jpg" />
   </div>
 
   <script src="app.js"></script>
 </body>
 </html>
+

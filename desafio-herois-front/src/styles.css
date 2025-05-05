@@ -1,37 +1,107 @@
+/* Corpo da página */
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f0f2f5;
+  background-color: #eceef9; /* Azul Majestic */
+  color: #000080; /* Texto azul escuro */
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: flex-start; /* Alinha o conteúdo no topo da tela */
+  height: 100vh;
+  flex-direction: column;
+  text-align: left; /* Alinha todo o texto à esquerda */
+  position: relative; /* Permite o uso de elementos posicionados */
 }
 
+/* Container centralizado para o conteúdo */
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 600px;
+  width: 100%;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left; /* Alinha o texto dentro do container à esquerda */
+  color: #9b9bdd; /* Azul escuro para o texto interno também */
+  position: absolute; /* Posiciona o container absolutamente */
+  top: 0; /* Garante que o container fique no topo da tela */
+  left: 0; /* Garante que o container fique à esquerda */
+  margin: 0; /* Remove a margem para garantir que fique colado no canto */
 }
 
+/* Estilo do formulário */
 .formulario {
-  background-color: #fff;
+  background-color: #333;
   padding: 15px;
   margin-bottom: 20px;
-  display: none;
+  display: block;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left; /* Alinha o formulário à esquerda */
 }
 
+/* Labels */
+.formulario label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left; /* Alinha as labels à esquerda */
+  font-weight: bold;
+  color: #000080; /* Azul escuro nas labels */
+}
+
+/* Inputs */
 input {
   display: block;
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  background: #fff;
   padding: 10px;
-  margin-bottom: 5px;
-  border: 1px solid #ddd;
+  margin: 10px auto;
+  background-color: #add8e6; /* Azul claro */
+  color: #111; /* Texto preto escuro */
+  border: 1px solid #000080; /* Azul escuro na borda */
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: left; /* Alinha o texto dos inputs à esquerda */
+}
+
+/* Botões */
+button {
+  background-color: #007bff; /* Azul para o botão Adicionar */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  text-align: center; /* Alinha o texto do botão no centro */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Botão Cancelar */
+button.cancelar {
+  background-color: #dc3545; /* Vermelho para o botão Cancelar */
+}
+
+button.cancelar:hover {
+  background-color: #c82333; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Título */
+h1 {
+  color: #000080; /* Azul escuro */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o título à esquerda */
+  margin-top: 0; /* Remove a margem superior para garantir que o título fique no topo */
+}
+
+/* Ocultar lista de heróis se não for mais usada */
+#listaHerois {
+  display: none;
 }

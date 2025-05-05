@@ -1,13 +1,30 @@
 import { Component } from '@angular/core';
-import { HeroFormComponent } from './hero-form.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+interface Heroi {
+  nomeHeroi: string;
+  dataNascimento: string;
+  altura: number;
+  peso: number;
+  superpoderes: string;
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeroFormComponent],
-  template: `
-    <h1>CRUD de Heróis</h1>
-    <app-hero-form></app-hero-form>
-  `
+  imports: [CommonModule, FormsModule], 
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  formularioVisivel = true;
+  nomeHeroi = '';
+  dataNascimento = '';
+  altura = 0;
+  peso = 0;
+  superpoderes = '';
+
+  herois: Heroi[] = [];
+}
+
